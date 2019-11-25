@@ -1,0 +1,15 @@
+import pandas as pd
+
+car = pd.read_csv('cars.csv')
+
+a = car.loc[[0,1,2,3,4],['Model','cyl','hp','wt','vs']]
+print('First Five Rows with Odd-Numbered Column: \n', a,'\n')
+
+b = car[car['Model'] == 'Mazda RX4']
+print('Row Contains the Model Mazda RX4: \n', b,'\n')
+
+c = car.loc[[23],['cyl']]
+print('Cylynders of the Car Model Camaro Z28: \n', c,'\n')
+
+d = car.loc[[1,28,18],['cyl','gear']]
+print('The Cylynders and Gear Type of Models Mazda RX4 Wag, Ford Pantera L, Honda Civic: \n', d,'\n')
