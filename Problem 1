@@ -1,0 +1,9 @@
+import pandas as pd
+
+rc = pd.read_csv('cars.csv')
+
+ff = rc[0:4]
+print('The First Five Resulting Cars: ', ff)
+
+lf = rc[27:31]
+print('The Last Five Resulting Cars: ', lf)
